@@ -1,0 +1,38 @@
+<div class="container">
+    <form [formGroup]="formGroup">
+        <h1>{{isSignUp ? 'Getting Started':'Welcome to Invision'}}</h1>
+
+        <div class="form-field hidden" [@switchPage]="isSignUp ? 'up': 'in'">
+            <label for="fullName">Full Name</label>
+            <input style="font: Regular 16px/20px Muli;" id="fullName" type="text" [formControl]="formGroup.controls['fullName']">
+        </div>
+        
+        <div class="form-field ">
+            <label for="userNameEmail">Users name or Email</label>
+            <input style="font: Regular 16px/20px Muli;" id="userNameEmail" type="text" [formControl]="formGroup.controls['userNameEmail']">
+        </div>
+        
+        <div class="form-field ">
+            <label for="password">Create Password</label>
+            <input style="font: Regular 16px/20px Muli;" id="password" type="password" [formControl]="formGroup.controls['password']">
+        </div>
+        <div class="footer">
+
+            <button class="btn-accent">Sign {{isSignUp ? 'up':'in'}}</button>
+
+            <div class="divider-container">
+                <div class="divider"></div>
+                Or
+                <div class="divider"></div>
+            </div>
+
+            <button class="btn-social"><img height="29px" width="29px" src="./assets/icon.png"><label>Sign up with Google</label></button>
+
+            <p>
+                By signing up, you agree to <b>Invision</b><br> <a> Terms of Conditions</a> and <a>Privacy Policy</a>
+            </p>
+
+            <p> {{!isSignUp ? 'New':'Already on'}} <b> Invision? </b><a (click)="isSignUp = !isSignUp"> {{!isSignUp ? 'Create Account':'Log in'}}</a> </p>
+        </div>
+    </form>
+</div>

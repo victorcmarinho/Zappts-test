@@ -1,0 +1,109 @@
+@import "../../styles"
+.container
+    display: grid
+    grid-template-columns: 1fr
+    justify-items: center
+    align-items: center
+    height: 100%
+    width: 100%
+    position: relative
+    z-index: 1
+    background-color: white
+    @include mobile-only()
+        margin-top: 95vh
+
+form
+    display: grid
+    grid-template-columns: 1fr
+    row-gap: 21px
+    max-width: 433px
+    width: 100%
+
+input
+    border: none
+    height: 42px
+    max-width: 433px
+    border-bottom-width: 1px
+    border-bottom-style: inset
+    border-color: $gray
+    padding: 11px 20px
+    border-radius: 0
+    font-size: $fz-medium
+
+label
+    font-size: $fz-mini
+    color: $gray
+
+.form-field 
+    display: flex
+    flex-direction: column
+    max-width: 433px
+    width: 100%
+
+.footer
+    display: grid
+    margin-top: 20px
+
+.btn-accent
+    background-color: $gray
+    color: white
+    border-radius: 100px
+    border-color: none
+    border-width: 0
+    height: 45px
+    width: 175px
+    justify-self: center
+
+.btn-social
+    background-color: white
+    color: black
+    border-radius: 100px
+    border-color: none
+    border-width: 0
+    height: 45px
+    width: 263px
+    box-shadow: $box-shadow
+    justify-self: center
+    margin-bottom: 20px
+
+h1
+    color: $light-gray
+    font-size: $fz-large
+    text-align: center
+
+.divider-container
+    display: grid
+    grid-template-columns: 40% 5% 40%
+    margin: 40px 0 40px 0
+    justify-content: center
+    justify-items: center
+    align-items: center
+    column-gap: 19.5px
+
+.divider
+    border: 0.5px solid $light-gray
+    height: 0
+    width: 100%
+
+p
+    margin: 20px 0 20px 0
+    color: $gray
+    font-size: $fz-mini
+    text-align: center
+    width: 307px
+    justify-self: center
+    
+
+a
+    color: $green
+    font-size: $fz-small
+    text-decoration: underline
+    cursor: pointer
+
+b
+    color: $gray
+    font-weight: bold
+
+.hidden
+    opacity: 0
+    height: 0

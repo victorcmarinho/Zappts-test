@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+$gray: #707070
+$green: #A9C5BA
+$light-gray:rgba(0, 0, 0, 0.16)
+$box-shadow: 0px 3px 6px $light-gray
+$border-radius: 100px
+
+$fz-large: 30px
+$fz-medium: 20px
+$fz-small: 16px
+$fz-mini: 14px
+
+$mq-mobile: 768px !default
+
+
+body 
+    font-family: Muli, Regular , sans-serif
+    height: 100vh
+    margin: 0
+
+
+@mixin mobile-only()
+    @media only screen and ( max-width:  $mq-mobile )
+        @content
+    

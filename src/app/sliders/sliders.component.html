@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="slider-container">
+        <div class="container-images">
+            <img  
+                *ngFor="let img of imagesList; let index = index" 
+                [src]="img" alt="Marcenas mattis egestas"
+                [@sliderInOut]="index == indexSelected % imagesList.length? 'in': 'out'" 
+            >
+        </div>
+        <h1>Marcenas mattis egestas</h1>
+        <p>Erdum et malesuada fames ac ante ileum primmer in faucibus uspendisse porta.</p>
+        <div class="container-dot">
+            <small class="dot {{index == indexSelected % imagesList.length ? 'active' : ''}}" *ngFor="let img of imagesList; let index = index" (click)="indexSelected = index"></small>    
+        </div>
+
+    </div>
+</div>

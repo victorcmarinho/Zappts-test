@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "zappts-test"
+    }
+  },
+  "defaultProject": "zappts-test",
+  "cli": {
+    "analytics": "f140f391-70cc-4101-8948-9c80dda25113"
+  }
 }
