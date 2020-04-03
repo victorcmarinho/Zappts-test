@@ -20,7 +20,7 @@
             {{isValid(formGroup.controls['password']) ? '*This field can not be empty ':''}}
         </div>
 
-        <label style="justify-self: end; cursor: pointer;">Forgot password?</label>
+        <label style="justify-self: end; cursor: pointer;" *ngIf="!isSignUp">Forgot password?</label>
         
         <div class="footer">
 

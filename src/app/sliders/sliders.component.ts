@@ -35,7 +35,7 @@ export class SlidersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    setInterval(() => this.indexSelected = this.indexSelected + 1 % this.imagesList.length, 3000);
+    setInterval(() => this.indexSelected = this.indexSelected + 1 % this.imagesList.length, 10000);
   }
 
 }
