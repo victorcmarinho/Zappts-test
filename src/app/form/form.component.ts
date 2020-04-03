@@ -1,6 +1,6 @@
 import { trigger, style, state, transition, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -41,6 +41,10 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  isValid(form: FormControl | any) {
+    return form.invalid && form.touched;
   }
 
 }
